@@ -16,6 +16,8 @@ class LinkedList:
         fast_ptr = self.head
         prev = None
         while(slow_ptr and fast_ptr.next and fast_ptr.next.next):
+            slow_ptr = slow_ptr.next
+            fast_ptr = fast_ptr.next.next
             if slow_ptr ==fast_ptr:
                 self.removeLoop(slow_ptr)
                 return 1
