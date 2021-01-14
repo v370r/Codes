@@ -3,7 +3,7 @@ def StringPermut(A,l,r):
     if l ==r:
         print("".join(A))
     else:
-        for x in range(l,len(A)):
+        for x in range(l,r+1):
             A[l],A[x] =A[x],A[l]
             StringPermut(A,l+1,r)
             A[l],A[x] =A[x],A[l]
